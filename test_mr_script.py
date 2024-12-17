@@ -1,6 +1,6 @@
 def test_mapreduce():
     from mr_script import DAUmetric
-    dau = DAUmetric(args=["lab3/log.tsv"])
+    dau = DAUmetric(args=["log.tsv"])
     with dau.make_runner() as runner:
         runner.run()
         data = list(dau.parse_output(runner.cat_output()))
